@@ -1,11 +1,16 @@
 baseURL = "https://wan0514.github.io"
 languageCode = "ko"
-title = "wan의 블로그"
+title = "wanja's blog"
 theme = "PaperMod"
 
 [pagination]
   pagerSize = 10
 
 [params]
-  author = "wan"
+  author = "wanja"
   defaultTheme = "auto"
+
+[params.homeInfoParams]
+  enabled = true
+  Title = "wanja's blog"
+  Content = "개발과 기록을 담는 공간입니다."
