@@ -1,9 +1,0 @@
-baseURL = "https://wan0514.github.io"
-languageCode = "ko"
-title = "wan의 블로그"
-theme = "PaperMod"
-paginate = 10
-
-[params]
-  author = "wan"
-  defaultTheme = "auto"
