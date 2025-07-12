@@ -1,0 +1,33 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # main 브랜치에 푸시될 때 워크플로우 실행
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Ubuntu 환경에서 실행
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # 리포지토리 코드 체크아웃
+        with:
+          submodules: true # 서브모듈(테마 등)도 함께 체크아웃
+          fetch-depth: 0 # 모든 기록을 가져와야 gh-pages 브랜치에 푸시 가능
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3 # Hugo 셋업 액션 사용
+        with:
+          hugo-version: "latest" # 최신 Hugo 버전 사용
+          # extended: true # extended 버전을 사용해야 할 경우 주석 해제 (ex: Sass/SCSS 사용 시)
+
+      - name: Build Hugo site
+        run: hugo --minify # Hugo 사이트 빌드 (public 폴더 생성)
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # gh-pages 배포 액션 사용
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 토큰 사용 (자동으로 제공됨)
+          publish_dir: ./public # public 폴더 내용을 gh-pages 브랜치에 배포
+          # force_orphan: true # 이전 기록을 모두 지우고 새로 생성하려면 주석 해제 (최초 배포 시나 클린 배포 시 유용)
