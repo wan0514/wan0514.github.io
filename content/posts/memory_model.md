@@ -5,17 +5,16 @@ lastmod: 2025-07-21T02:00:00+09:00
 draft: false
 author: "wanja"
 categories:
-
-- "cs"
-- "Operating System"
-- "Memory Management"
-  tags:
-- "OS"
-- "Memory"
-- "Stack"
-- "Heap"
-- "Garbage Collection"
-  description: "CS 개념 학습 중 가장 추상적이고도 중요하다고 여겨지는 '프로세스 메모리 구조'를 직접 시뮬레이터를 구현하며 탐구한 여정을 담았습니다. 스택과 힙의 실제 작동 방식, malloc/free와 가비지 컬렉션의 미묘한 차이, 그리고 그 과정에서 겪었던 혼란과 깨달음을 솔직하게 풀어냈습니다."
+  - "cs"
+  - "Operating System"
+  - "Memory Management"
+tags:
+  - "OS"
+  - "Memory"
+  - "Stack"
+  - "Heap"
+  - "Garbage Collection"
+description: "CS 개념 학습 중 가장 추상적이고도 중요하다고 여겨지는 '프로세스 메모리 구조'를 직접 시뮬레이터를 구현하며 탐구한 여정을 담았습니다. 스택과 힙의 실제 작동 방식, malloc/free와 가비지 컬렉션의 미묘한 차이, 그리고 그 과정에서 겪었던 혼란과 깨달음을 솔직하게 풀어냈습니다."
 ---
 
 ## 프로세스 메모리 구조 탐험기: 직접 만든 시뮬레이터와 함께한 탐구
